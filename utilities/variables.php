@@ -39,4 +39,14 @@
 
     ];
 
+    foreach ($hotels as $key => $hotel) {
+        if($hotel['parking'] === true){
+            $hotel['parking'] = "C'è parcheggio";
+        }elseif($hotel['parking'] === false){
+            $hotel['parking'] = "Non fornito.";
+        }else{
+            $hotel['parking'] = 'Dato non fornito.';
+        }
+    }
+
 ?>

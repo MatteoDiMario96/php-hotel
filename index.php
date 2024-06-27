@@ -38,6 +38,33 @@
                 </li>
             <?php } ?> 
         </ul>
+
+                
+
+
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Descrizione</th>
+                    <th scope="col">Parcheggio</th>
+                    <th scope="col">Voto</th>
+                    <th scope="col">Distanza in Km</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <?php foreach ($hotels as $key => $hotel) { ?>
+                    <tr>
+                        <th scope="row"><?php echo $hotel['name'] ?></th>
+                        <td> <?php echo $hotel['description'] ?> </td>
+                        <td> <?php echo $hotel['parking'] ?> </td>
+                        <td> <?php echo $hotel['vote'] ?> / 5</td>
+                        <td> <?php echo $hotel['distance_to_center'] ?> Km</td>
+                    </tr>
+                    <?php } ?>
+            </tbody>
+        </table>
     </main>
     
     <!--Bootstrap Script -->
